@@ -63,8 +63,8 @@ PRODUCT_PACKAGES += \
     Tag \
     vendor.nxp.hardware.nfc@1.2-service \
 
-PRODUCT_BOOT_JARS += \
-    com.nxp.nfc.nq
+#PRODUCT_BOOT_JARS += \
+#    com.nxp.nfc.nq
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
@@ -79,8 +79,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_willow/android.hardware.nfc.uicc.xml
 
 # Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
+#PRODUCT_PACKAGES += \
+#    XiaomiParts
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -91,6 +91,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service \
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+        $(LOCAL_PATH) \
+       hardware/qcom-caf/sm8150
 
 # Thermal
 PRODUCT_COPY_FILES += \
